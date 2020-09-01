@@ -1,5 +1,5 @@
 import React from "react"
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -52,30 +52,39 @@ const MemberApplyPage = () => {
                 spacing={2}
                 style={{marginTop: '12px', marginBottom: '12px'}}
             >
+                {/*
                 <Grid item xs={12}>
                     <TextField id="standard-basic" label="编号"/>
                 </Grid>
-                <Grid item xs={12}>
+*/}
+                <Grid item xs={6}>
                     <TextField id="standard-basic" label="姓名"/>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={6}>
+                    <TextField id="standard-basic" label="身份证号"/>
+                </Grid>
+                <Grid item xs={6}>
+                    <TextField id="standard-basic" label="护照号"/>
+                </Grid>
+
+                {/*<Grid item xs={12}>
                     <FormControl component="fieldset">
                         <FormLabel component="legend">性别</FormLabel>
                         <RadioGroup row aria-label="gender" name="gender1" value={value} onChange={handleChange}>
-                            <FormControlLabel value="Female" control={<Radio />} label="男" />
-                            <FormControlLabel value="Male" control={<Radio />} label="女" />
-                            <FormControlLabel value="Other" control={<Radio />} label="其他" />
+                            <FormControlLabel value="Female" control={<Radio/>} label="男"/>
+                            <FormControlLabel value="Male" control={<Radio/>} label="女"/>
+                            <FormControlLabel value="Other" control={<Radio/>} label="其他"/>
                         </RadioGroup>
                     </FormControl>
-                </Grid>
-                <Grid item xs={12}>
+                </Grid>*/}
+                {/*<Grid item xs={12}>
                     <TextField id="standard-basic" label="生日" type="date" defaultValue="2017-05-24"
                                className={classes.textField}
                                InputLabelProps={{
                                    shrink: true,
                                }}/>
-                </Grid>
-                <Grid item xs={3}>
+                </Grid>*/}
+                <Grid item xs={6}>
                     <Autocomplete
                         id="combo-box-demo"
                         options={top100Films}
@@ -84,11 +93,20 @@ const MemberApplyPage = () => {
                         renderInput={(params) => <TextField {...params} label="国籍"/>}
                     />
                 </Grid>
-                <Grid item xs={12}>
+                {/*<Grid item xs={12}>
                     <TextField id="standard-basic" label="所在地址" fullWidth/>
+                </Grid>*/}
+                <Grid item xs={12}>
+                    <TextField id="standard-basic" multiline rows={4} fullWidth label="专业特长"/>
                 </Grid>
                 <Grid item xs={12}>
-                    <TextField id="standard-basic" multiline rows={4} fullWidth label="学习工作履历"/>
+                    <TextField id="standard-basic" multiline rows={4} fullWidth label="工作履历"/>
+                </Grid>
+                <Grid item xs={12}>
+                    <TextField id="standard-basic" multiline rows={4} fullWidth label="成就简介"/>
+                </Grid>
+                <Grid item xs={12}>
+                    <TextField id="standard-basic" multiline rows={4} fullWidth label="入会认识"/>
                 </Grid>
                 <Grid item xs={12}>
                     <Button variant="contained" color="primary"> 提交申请 </Button>

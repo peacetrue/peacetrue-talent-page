@@ -56,11 +56,11 @@ const Layout = ({children}) => {
                             <MenuIcon/>
                         </IconButton>
                         <img src={logo} alt={'logo'} style={{height: '48px', margin: '0 16px'}}/>
-                        <Typography variant="h3">
+                        <Typography variant="h4">
                             <Link to="/"
                                   style={{textDecoration: 'none', color: 'black'}}>{data.site.siteMetadata.title}</Link>
                         </Typography>
-                        <Typography variant="h6" className={classes.title}>
+                        <Typography variant="h6" className={classes.title} style={{marginLeft: '16px'}}>
                             <Link to="/member-apply">入会申请</Link>
                         </Typography>
                         <LanguageListMenu/>

@@ -8,7 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import StickyHeadTable from "../components/data-list";
-import Autocomplete from '@material-ui/lab/Autocomplete';
 
 const enterprises = [
     {name: '企业1', url: 'https://www.baidu.com'},
@@ -88,9 +87,10 @@ const IndexPage = () => (
             {enterprises.map((item, index) =>
                 <Grid item key={index}>
                     <UiLink href={item.url}>{index}-{item.name}</UiLink>
-                </Grid>)
-            }
+                </Grid>
+            )}
         </Grid>
+{/*
         <Grid
             container
             direction="row"
@@ -110,6 +110,7 @@ const IndexPage = () => (
                 </Grid>)
             }
         </Grid>
+*/}
         <form noValidate autoComplete="off">
             <Grid
                 container
@@ -128,9 +129,9 @@ const IndexPage = () => (
                     <TextField id="standard-basic" label="姓名"/>
                 </Grid>
                 <Grid item>
-                    <TextField id="standard-basic" label="身份证号/护照号"/>
+                    <TextField id="standard-basic" label="编号"/>
                 </Grid>
-                <Grid item xs={2}>
+                {/*<Grid item xs={2}>
                     <Autocomplete
                         id="combo-box-demo"
                         options={nations}
@@ -138,7 +139,7 @@ const IndexPage = () => (
                         style={{width: '100%'}}
                         renderInput={(params) => <TextField {...params} label="国籍"/>}
                     />
-                </Grid>
+                </Grid>*/}
                 <Grid item>
                     <Button variant="contained" color="primary"> 查询 </Button>
                 </Grid>
