@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import {Resource} from "react-admin";
 
 import {MemberList} from './list';
